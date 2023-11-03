@@ -7,7 +7,7 @@
    text-decoration: none;
 }
 
-.navbar{
+.nav-bar{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -15,7 +15,7 @@
     background-color: darkgray;
 }
 
-.navbar-brand{
+.nav-bar-brand{
     border-radius: 0.4rem;
     color: white;
     background-color: black;
@@ -23,7 +23,7 @@
 
 }
 
-.nav-link{
+.nav-link-button{
     border-radius: 0.4rem;
     margin-left: 1rem;
     padding: 0.8rem;
@@ -31,7 +31,7 @@
     background-color: black;
 }
 
-.navbar-brand:hover,.nav-link:hover{
+.nav-bar-brand:hover,.nav-link-button:hover{
     background-color: rgb(33, 33, 33);
 }
 

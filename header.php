@@ -9,14 +9,13 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <div class="navbar-icon">
-            <a class="navbar-brand" href="#">Car Rental</a>
+    <nav class="nav-bar">
+        <div class="nav-bar-icon">
+            <a class="nav-bar-brand" href="/user_page.php">Notes</a>
         </div>
-        <div class="navbar-nav">
-            <a class="nav-link" aria-current="page" href="#">Dashboard</a>
-            <a class="nav-link" href="#">Contact</a>
-            <a class="nav-link" href="#">About</a>
+        <div class="nav-bar-nav">
+            <a class="nav-link-button" aria-current="page" href="/user_page.php">Dashboard</a>
+            <a class="nav-link-button" href="/contact.php">Contact</a>
         </div>
     </nav>
 </body>

@@ -4,6 +4,12 @@
 
 session_start();
 
+if (isset($_SESSION['user_name'])) {
+   // If the user is logged in, redirect to the user_page
+   header("Location: user_page.php");
+   exit();
+}
+
 if (isset($_POST['submit'])) {
 
    $name = mysqli_real_escape_string($conn, $_POST['name']);

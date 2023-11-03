@@ -4,28 +4,29 @@
 <?php
 // echo $_SERVER['REQUEST_METHOD'];
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(isset($_POST['submit'])){
-        $firstname = $_POST['firstname'];
-        $lastname = $_POST['lastname'];
-        $email_from = $_POST['email'];
-        $subject = $_POST['subject'];
-        $message = $_POST['message'];
-    
-        $to_email = "pratik.kumar2402@gmail.com";
-        $desc =
-            "Contact Query from the user:
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $email_from = $_POST['email'];
+    $subject = $_POST['subject'];
+    $body = $_POST['message'];
+    $headers = "Email from: $email_from";
+
+    $to_email = "kumar.pratik2402@outlook.com";
+    $message =
+        "Contact Query from the user:
         Name: " . $firstname . " " . $lastname . "
-        Email: " . $email_from . "
-        Message: " . $message . "";
-    
-        if (mail($to_email, $subject, $desc)) {
-            echo "<div class='alert alert-success' role='alert'>
-            <strong>Success!</strong> author has been informed.
+        Message: " . $body . "";
+
+    if (mail($to_email, $subject, $message, $headers)) {
+        echo "<div class='alert alert-success' role='alert'>
+            <strong>Success!</strong> message has been sent.
           </div>
           </div";
-        } else {
-            echo "Email sending failed...";
-        }
+    } else {
+        echo "<div class='alert alert-danger' role='alert'>
+        <strong>Failure!</strong> author did not recieved the mail.
+      </div>
+      </div";
     }
 }
 ?>
@@ -41,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <div class="container">
-        <form action="contact.php" method="POST">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -57,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="submit">
         </form>
     </div>
 </body>

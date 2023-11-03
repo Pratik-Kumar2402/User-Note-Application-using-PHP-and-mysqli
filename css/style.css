@@ -9,11 +9,11 @@
 }
 
 .form-container{
-   min-height: 100%;
+   min-height: 81vh;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding:20px;
+   padding: 20px;
    padding-bottom: 60px;
    background: #eee;
 }
@@ -49,16 +49,15 @@
 }
 
 .form-container form .form-btn{
-   background: #fbd0d9;
-   color:crimson;
+   background: black;
+   color:white;
    text-transform: capitalize;
    font-size: 20px;
    cursor: pointer;
 }
 
 .form-container form .form-btn:hover{
-   background: crimson;
-   color:#fff;
+   background: rgb(52, 52, 52);
 }
 
 .form-container form p{
@@ -68,7 +67,7 @@
 }
 
 .form-container form p a{
-   color:crimson;
+   color:blue;
 }
 
 .form-container form .error-msg{
